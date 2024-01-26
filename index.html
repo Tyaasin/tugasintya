@@ -1,0 +1,51 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<body>
+
+<div class="w3-bar w3-yellow">
+    <button class="w3-bar-item w3-button" onclick="openbarang('Mobil')">Mobil</button>
+    <button class="w3-bar-item w3-button" onclick="openbarang('Unikomart')">Unikomart</button>
+    <button class="w3-bar-item w3-button" onclick="openbarang('Kampus')">Kampus</button>
+    <button class="w3-bar-item w3-button" onclick="openbarang('Foto')">Foto</button>
+</div>
+    
+<div id="Mobil" class="w3-container tugas w3-animate-fading" style="display:none">
+    <h2>Mobil</h2>
+    <img src="mobil.jpg" alt="">
+</div>
+    
+<div id="Unikomart" class="w3-container tugas w3-animate-bottom" style="display:none">
+    <h2>Unikomart</h2>
+    <img src="unikomart.jpg" alt="">
+</div>
+    
+<div id="Kampus" class="w3-container tugas w3-animate-top" style="display:none">
+    <h2>Kampus</h2>
+    <img src="kampus.jpg" alt="">
+</div>
+
+<div id="Foto" class="w3-container tugas w3-animate-zoom" style="display:none">
+    <h2>Foto</h2>
+    <img src="foto.jpg" alt="">
+</div>    
+
+<script>
+function openbarang(params){
+    var index;
+    console.log(params)
+    var element = document.getElementsByClassName('tugas');
+    for ( index = 0; index < element.length; index++) {
+        element[index].style.display = 'none';
+    }
+document.getElementById(params).style.display = 'block';    
+}
+
+
+
+
+
+</script>
+</body>
+</html>
